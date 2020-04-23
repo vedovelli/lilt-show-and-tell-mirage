@@ -5,6 +5,10 @@ import store from "./redux/store";
 import "./main.css";
 import App from "./App";
 
+if (process.env.NODE_ENV === "development") {
+  require("./miragejs").makeServer();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
