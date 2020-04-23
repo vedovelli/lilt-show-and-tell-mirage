@@ -18,8 +18,12 @@ const MovieList = ({ movies, wasSearched }) => (
         className="m-0 mt-3 xl:grid xl:grid-cols-2 xl:gap-4"
       >
         {movies.map((movie) => (
-          <li className="p-1 mx-0 mb-3 bg-white shadow cursor-pointer xl:mx-3 sm:rounded-lg xl:justify-between">
-            <MovieCard key={movie.id} data-testid="movie-card" movie={movie} />
+          <li
+            key={movie.id}
+            data-testid="movie"
+            className="p-1 mx-0 mb-3 bg-white shadow cursor-pointer xl:mx-3 sm:rounded-lg xl:justify-between"
+          >
+            <MovieCard data-testid="movie-card" movie={movie} />
           </li>
         ))}
       </ul>

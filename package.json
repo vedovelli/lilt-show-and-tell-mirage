@@ -5,7 +5,7 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.2.0",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/react": "^10.0.3",
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.7.6",
     "axios": "^0.19.2",
@@ -24,7 +24,7 @@
   "scripts": {
     "start": "yarn watch:css && react-scripts start",
     "build": "yarn build:css && react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject",
     "build:css": "postcss src/tailwind.scss -o src/main.css",
     "watch:css": "postcss src/tailwind.scss -o src/main.css"
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
